@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="308dp"
+        android:layout_height="wrap_content">
+
+        <!-- 타이틀 텍스트 -->
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/popup_title"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:text="@string/common_txt_glucose_measure_condition"
+            android:textColor="@color/color_2b2729"
+            android:textSize="17sp" />
+
+        <!-- 식전/식후 -->
+        <LinearLayout
+            android:id="@+id/common_glucose_condition_dialog_llayout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dialog_title"
+            android:background="@drawable/img_popbg"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_first_condition"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:button="@drawable/selector_radio_nor_on"
+                android:paddingLeft="10dp"
+                android:text="mg/dL"
+                android:textColor="@color/color_555053"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/common_glucose_condition_dialog_llayout_content"
+                android:background="@drawable/shape_dialog_line" />
+
+            <CheckBox
+                android:id="@+id/cb_second_condition"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:button="@drawable/selector_radio_nor_on"
+                android:paddingLeft="10dp"
+                android:text="@string/dialog_glucose_unit_fast"
+                android:textColor="@color/color_555053"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/common_glucose_condition_dialog_llayout_content"
+            android:background="@drawable/shape_dialog_line" />
+
+        <LinearLayout
+            android:id="@+id/common_glucose_condition_dialog_llayout_close"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/common_glucose_condition_dialog_llayout_content"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/popup_button"
+            android:orientation="horizontal">
+
+            <!-- close 버튼 -->
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:text="@string/common_txt_cancel"
+                android:textColor="@color/color_868586"
+                android:textSize="16sp" />
+
+            <!-- input 버튼 -->
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/dialog_confirm"
+                android:textColor="@color/color_222222"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

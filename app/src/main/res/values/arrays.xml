@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string-array name="setting_height_type">
+        <item>@string/tall_cm</item>
+        <item>@string/tall_feet</item>
+    </string-array>
+
+
+    <string-array name="height_code">
+        <item ><font size="20">cm</font></item>
+        <item ><font size="20">ft.in</font></item>
+    </string-array>
+
+    <string-array name="weight_code">
+        <item >@string/weight_kg</item>
+        <item >@string/weight_lbs</item>
+    </string-array>
+
+    <string-array name="language">
+        <item >English</item>
+        <item >한국어</item>
+        <item >Espanol</item>
+        <item >日本語</item>
+        <item >Deutsch</item>
+        <item >francais</item>
+        <item >Italiano</item>
+    </string-array>
+
+    <string-array name="profile">
+        <item >@string/setting_profile_name</item>
+        <item >@string/common_txt_birth</item>
+        <item >@string/common_txt_gender</item>
+        <item >@string/common_txt_tall</item>
+        <item >@string/setting_activity_password</item>
+        <item >@string/setting_manage_blood_glucose</item>
+        <item >@string/common_txt_account</item>
+    </string-array>
+
+</resources>

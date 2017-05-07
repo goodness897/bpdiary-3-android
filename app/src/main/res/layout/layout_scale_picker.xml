@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_kg"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="12dp">
+
+
+                <kr.co.openit.bpdiary.customview.WheelNumberPicker
+                    android:id="@+id/np_number_kg"
+                    android:layout_width="@dimen/picker_width"
+                    android:layout_height="match_parent"
+                    app:wheel_atmospheric="true"
+                    app:wheel_cyclic="false"
+                    app:wheel_curved="false"
+                    app:wheel_min_value="1"
+                    app:wheel_max_value="250">
+
+                </kr.co.openit.bpdiary.customview.WheelNumberPicker>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="."
+                android:textSize="28sp" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <kr.co.openit.bpdiary.customview.WheelNumberPicker
+                    android:id="@+id/np_decimal_kg"
+                    android:layout_width="@dimen/picker_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    app:wheel_atmospheric="true"
+                    app:wheel_cyclic="false"
+                    app:wheel_curved="false"
+                    app:wheel_max_value="9"
+                    app:wheel_min_value="0">
+
+                </kr.co.openit.bpdiary.customview.WheelNumberPicker>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_lbs"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="12dp">
+
+
+                <kr.co.openit.bpdiary.customview.WheelNumberPicker
+                    android:id="@+id/np_number_lbs"
+                    android:layout_width="@dimen/picker_width"
+                    android:layout_height="match_parent"
+                    app:wheel_atmospheric="true"
+                    app:wheel_min_value="1"
+                    app:wheel_max_value="551"
+                    app:wheel_cyclic="false">
+
+                </kr.co.openit.bpdiary.customview.WheelNumberPicker>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="."
+                android:textSize="28sp" />
+
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <kr.co.openit.bpdiary.customview.WheelNumberPicker
+                    android:id="@+id/np_decimal_lbs"
+                    android:layout_width="@dimen/picker_width"
+                    android:layout_marginRight="3dp"
+                    android:layout_height="match_parent"
+                    app:wheel_atmospheric="true"
+                    app:wheel_cyclic="false"
+                    app:wheel_max_value="9"
+                    app:wheel_min_value="0">
+
+                </kr.co.openit.bpdiary.customview.WheelNumberPicker>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</FrameLayout>

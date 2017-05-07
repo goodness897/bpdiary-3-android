@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb">
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_round_close"
+            android:text="@string/bp_guide_btn"
+            android:textColor="@color/color_555053" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_save_solid"
+            android:text="@string/common_txt_next"
+            android:textColor="@color/color_ffffff" />
+
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom"
+        android:foregroundGravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
+
+        <kr.co.openit.bpdiary.customview.CustomCircleView
+            android:id="@+id/img_first"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:circle_color="@color/color_f2521f" />
+
+        <kr.co.openit.bpdiary.customview.CustomCircleView
+            android:id="@+id/img_second"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/img_first"
+            app:circle_color="@color/color_f3e7da" />
+
+        <kr.co.openit.bpdiary.customview.CustomCircleView
+            android:id="@+id/img_third"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/img_second"
+            app:circle_color="@color/color_f3e7da" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="43dp"
+        android:gravity="center"
+        android:text="@string/manual_measure"
+        android:textColor="@color/color_222222"
+        android:textSize="25sp" />
+</RelativeLayout>

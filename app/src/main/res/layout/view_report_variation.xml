@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ll_variation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fbfbfb"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_bp_report_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_bp"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/bp_sys"
+                                android:textColor="@color/color_007bf1"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_sys"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_sys"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/bp_graph_txt_unit"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/color_e2e2e2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/bp_dia"
+                                android:textColor="@color/color_ff0000"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_dia"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_dia"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/bp_graph_txt_unit"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 그래프 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_bp_sys_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="-15dp"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_bp_dia_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="-15dp"
+                        android:orientation="vertical" />
+
+                    <!-- 그래프 끝 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="36dp"
+                            android:paddingRight="36dp">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                app:circle_color="@color/color_d8d8d8" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_sys_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/report_report_variation_bp_sys_result"
+                                    android:textColor="@color/color_979495"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="36dp"
+                            android:paddingRight="36dp">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                app:circle_color="@color/color_d8d8d8" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_dia_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/report_report_variation_bp_dia_result"
+                                    android:textColor="@color/color_979495"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+                <!-- 혈압끝 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bp_report_non_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_bp"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/report_variation_bp_miss_data_msg"
+                        android:textColor="@color/color_cbcbcb"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_bp_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/selector_round_close"
+                        android:text="@string/report_variation_bp_insert"
+                        android:textColor="@color/color_555053"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+                <!-- 혈압 데이터 비교불가 뷰 끝 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_ws_report_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="29dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_weight"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/main_navigation_weight"
+                                android:textColor="@color/color_00acc8"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_weight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_weight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_weight_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/color_e2e2e2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/weighing_scale_main_txt_bmi"
+                                android:textColor="@color/color_9e71e0"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_bmi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_bmi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/weight_bmi"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- 그래프 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_ws_weight_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="-15dp"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_ws_bmi_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="-15dp"
+                        android:orientation="vertical" />
+
+                    <!-- 그래프 끝 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="36dp"
+                        android:paddingRight="36dp">
+
+                        <kr.co.openit.bpdiary.customview.CustomCircleView
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            app:circle_color="@color/color_d8d8d8" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_weight_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/report_report_variation_ws_weight_result"
+                                android:textColor="@color/color_979495"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ws_report_non_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_weight"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/report_variation_bp_miss_data_msg"
+                        android:textColor="@color/color_cbcbcb"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_ws_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/selector_round_close"
+                        android:text="@string/report_variation_ws_insert"
+                        android:textColor="@color/color_555053"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+
+                <!-- 체중 끝 -->
+
+
+                <LinearLayout
+                    android:id="@+id/ll_bg_report_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_glucose"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/glucose_before_meal"
+                                android:textColor="@color/color_1684cc"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_before"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_before"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_before_glucose_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/color_e2e2e2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/glucose_after_meal"
+                                android:textColor="@color/color_f06515"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_after"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_after"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_after_glucose_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 그래프 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_bg_before_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="-15dp"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_bg_after_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="-15dp"
+                        android:orientation="vertical" />
+
+
+                    <!-- 그래프 끝 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="36dp"
+                            android:paddingRight="36dp">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                app:circle_color="@color/color_d8d8d8" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_before_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/report_report_variation_bg_before_result"
+                                    android:textColor="@color/color_979495"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginRight="36dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                app:circle_color="@color/color_d8d8d8" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_after_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/report_report_variation_bg_after_result"
+                                    android:textColor="@color/color_979495"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+
+                <!-- before glucose -->
+                <LinearLayout
+                    android:id="@+id/ll_bg_gb_report_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_glucose"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/glucose_before_meal"
+                                android:textColor="@color/color_1684cc"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_before_glucose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_before_glucose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_single_before_glucose_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/glucose_graph_mg_dl"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 그래프 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_bg_gb_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="vertical" />
+
+                    <!-- 그래프 끝 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="36dp"
+                            android:paddingRight="36dp">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                app:circle_color="@color/color_d8d8d8" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_before_glucose_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/report_report_variation_bg_before_result"
+                                    android:textColor="@color/color_979495"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/report_variation_bg_after_miss_data_msg"
+                        android:textColor="@color/color_cbcbcb"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_after_glucose_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/selector_round_close"
+                        android:text="@string/report_variation_bg_after_insert"
+                        android:textColor="@color/color_555053"
+                        android:textSize="16sp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+
+                <!-- after glucose -->
+                <LinearLayout
+                    android:id="@+id/ll_bg_ga_report_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_glucose"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/glucose_after_meal"
+                                android:textColor="@color/color_f06515"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_compare_after_glucose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_4a4a4a"
+                                    android:textSize="54sp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_compare_after_glucose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_single_after_glucose_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/color_4d3a3227"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 그래프 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_bg_ga_graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:orientation="vertical" />
+
+                    <!-- 그래프 끝 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="36dp"
+                            android:paddingRight="36dp">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="4dp"
+                                android:layout_height="4dp"
+                                app:circle_color="@color/color_d8d8d8" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_after_glucose_result"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/report_report_variation_bg_after_result"
+                                    android:textColor="@color/color_979495"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/report_variation_bg_before_miss_data_msg"
+                        android:textColor="@color/color_cbcbcb"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btn_before_glucose_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/selector_round_close"
+                        android:text="@string/report_variation_bg_before_insert"
+                        android:textColor="@color/color_555053"
+                        android:textSize="16sp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_bg_report_non_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="28dp"
+                        android:background="@drawable/shape_round_report_title"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/main_navigation_glucose"
+                        android:textColor="@color/color_282325"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="@string/report_variation_bp_miss_data_msg"
+                        android:textColor="@color/color_cbcbcb"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_bg_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@drawable/selector_round_close"
+                        android:text="@string/report_variation_bg_insert"
+                        android:textColor="@color/color_555053"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="45dp"
+                        android:background="@color/color_eff0f2" />
+
+                </LinearLayout>
+
+
+                <!-- 혈당 끝 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_report_share_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/selector_round_report_share_btn"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_report_share_blue_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/report_share"
+                        android:textColor="@color/selector_report_share_btn_text"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_is_network_false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="87dp"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:paddingTop="87dp">
+
+                    <ImageView
+                        android:id="@+id/iv_network_false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="81dp"
+                        android:layout_marginRight="81dp"
+                        android:background="@drawable/ic_no_network" />
+
+                    <TextView
+                        android:id="@+id/tv_network_false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="5dp"
+                        android:text="@string/report_variation_network_false_guide"
+                        android:textColor="@color/color_d1d1d1"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_network_try_again"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="73dp"
+                        android:layout_marginRight="73dp"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/report_variation_network_try_again"
+                            android:textColor="@color/color_282325"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:background="@drawable/btn_refresh" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

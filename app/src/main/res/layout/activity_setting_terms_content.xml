@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <!-- 광고 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/ll_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_000000"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+        <include
+            android:id="@+id/layout_ads"
+            layout="@layout/layout_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- 웹뷰 -->
+    <WebView
+        android:id="@+id/market_webview_openmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_ads"
+        android:layout_below="@+id/layout_toolbar"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:id="@+id/ll_is_network_false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_ads"
+        android:layout_below="@+id/layout_toolbar"
+        android:background="@color/color_fbfbfb"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="87dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:paddingTop="87dp">
+
+        <ImageView
+            android:id="@+id/iv_network_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="81dp"
+            android:layout_marginRight="81dp"
+            android:background="@drawable/ic_no_network" />
+
+        <TextView
+            android:id="@+id/tv_network_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/report_variation_network_false_guide"
+            android:textColor="@color/color_d1d1d1"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_network_try_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+            android:layout_marginRight="73dp"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/report_variation_network_try_again"
+                android:textColor="@color/color_282325"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_refresh" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

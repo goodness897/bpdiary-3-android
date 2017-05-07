@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <stroke android:color="@color/color_efebe5" android:width="1dp"/>
+            <solid android:color="#f7f5f5" />
+            <size android:width="@dimen/btn_account_width" android:height="@dimen/btn_account_height" />
+            <corners android:radius="100dp" />
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <stroke android:color="@color/color_efebe5" android:width="1dp"/>
+            <solid android:color="@color/color_ffffff" />
+            <size android:width="@dimen/btn_account_width" android:height="@dimen/btn_account_height" />
+            <corners android:radius="100dp" />
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+</selector>

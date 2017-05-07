@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <!-- Google Ad(광고) -->
+    <string name="google_ad_mob_key">ca-app-pub-3713617626309319/1091026380</string>
+
+    <!-- ____facebook____ -->
+    <string name="facebook_app_id">197050070760655</string>
+</resources>

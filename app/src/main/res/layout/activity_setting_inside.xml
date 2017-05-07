@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_setting_inside"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical"
+    tools:context="kr.co.openit.bpdiary.activity.setting.SettingInsideActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <!-- 광고 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/ll_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_000000"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+        <include
+            android:id="@+id/layout_ads"
+            layout="@layout/layout_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_toolbar"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_efebe6" />
+
+    <RelativeLayout
+        android:id="@+id/rl_s_health"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_layout_height"
+        android:background="@color/color_ffffff"
+        android:layout_below="@+id/iv_line1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="@dimen/profile_margin_left"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting_s_health"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/profile_text_size" />
+
+        <!--<android.support.v7.widget.SwitchCompat-->
+            <!--android:id="@+id/switch_s_health"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="27dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:checked="false"-->
+            <!--android:switchMinWidth="22dp"-->
+            <!--android:textOff=""-->
+            <!--android:textOn=""-->
+            <!--android:theme="@style/MySwitchInside" />-->
+
+        <kr.co.openit.bpdiary.customview.CustomSwitch
+            android:id="@+id/switch_s_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="27dp"
+            app:forceAspectRatio="false"
+            app:switchDesign="android"
+            app:switchBkgCheckedImage="@drawable/switch_track_pre"
+            app:switchBkgNotCheckedImage="@drawable/switch_track_nor"
+            app:switchToggleCheckedImage="@drawable/switch_knob" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_s_health"
+        android:layout_marginLeft="22dp"
+        android:background="@color/color_efebe6" />
+
+    <RelativeLayout
+        android:id="@+id/rl_google_fit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_layout_height"
+        android:layout_below="@id/iv_line2"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="@dimen/profile_margin_left"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting_google_fit"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/profile_text_size" />
+
+        <!--<android.support.v7.widget.SwitchCompat-->
+            <!--android:id="@+id/switch_google_fitness"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBaseline="@+id/textView2"-->
+            <!--android:layout_alignBottom="@+id/textView2"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginEnd="27dp"-->
+            <!--android:layout_marginRight="27dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:checked="false"-->
+            <!--android:switchMinWidth="22dp"-->
+            <!--android:textOff=""-->
+            <!--android:textOn=""-->
+            <!--android:theme="@style/MySwitchInside" />-->
+        <kr.co.openit.bpdiary.customview.CustomSwitch
+            android:id="@+id/switch_google_fitness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="27dp"
+            app:forceAspectRatio="false"
+            app:switchDesign="android"
+            app:switchBkgCheckedImage="@drawable/switch_track_pre"
+            app:switchBkgNotCheckedImage="@drawable/switch_track_nor"
+            app:switchToggleCheckedImage="@drawable/switch_knob" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_google_fit"
+        android:layout_marginLeft="22dp"
+        android:background="@color/color_efebe6" />
+
+    <RelativeLayout
+        android:id="@+id/rl_notice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_layout_height"
+        android:layout_below="@id/iv_line3"
+        android:background="@drawable/layout_selector">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/profile_margin_left"
+            android:text="@string/setting_notice"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/profile_text_size" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginRight="27dp"
+            android:background="@drawable/ic_device_list" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_notice"
+        android:background="@color/color_efebe6" />
+
+</RelativeLayout>

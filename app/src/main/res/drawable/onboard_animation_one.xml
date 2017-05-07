@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/onboarding_1_00"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_01"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_02"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_03"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_04"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_05"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_06"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_07"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_08"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/onboarding_1_09"
+        android:duration="300" />
+
+</animation-list>

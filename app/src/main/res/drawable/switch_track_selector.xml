@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/switch_track_radius" />
+            <solid android:color="@color/color_f06515" />
+            <!-- results in the track looking smaller than the thumb -->
+            <stroke android:width="12dp" android:color="#00ffffff" />
+        </shape>
+
+    </item>
+
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/switch_track_radius" />
+            <solid android:color="@color/color_efece8" />
+            <!-- results in the track looking smaller than the thumb -->
+            <stroke android:width="12dp" android:color="#00ffffff" />
+        </shape>
+    </item>
+</selector><!--<?xml version="1.0" encoding="utf-8"?>--><!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<item android:drawable="@drawable/switch_track_nor" android:state_checked="false" />-->
+
+    <!--<item android:drawable="@drawable/switch_track_pre" android:state_checked="true" />-->
+
+
+    <!--</selector>-->
+
+

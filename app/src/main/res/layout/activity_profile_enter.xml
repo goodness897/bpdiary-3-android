@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/rl_profile_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fbfbfb"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:context="kr.co.openit.bpdiary.activity.intro.ProfileEnterActivity">
+
+        <include
+            android:id="@+id/ll_navi_back"
+            layout="@layout/view_navi_back"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <ScrollView
+            android:id="@+id/sv_profile_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:orientation="vertical"
+                android:paddingBottom="14dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/ic_signin_info" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|left"
+                        android:text="@string/common_enter_profile_guide"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_user_first_name"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_round_input"
+                        android:gravity="center"
+                        android:hint="@string/common_enter_profile_first_name"
+                        android:textColor="@color/color_242424"
+                        android:textColorHint="@color/color_bab9b9"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_user_last_name"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_round_input"
+                        android:gravity="center"
+                        android:hint="@string/common_enter_profile_last_name"
+                        android:textColorHint="@color/color_bab9b9"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_user_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/shape_round_input"
+                    android:gravity="center"
+                    android:hint="@string/common_enter_profile_birth"
+                    android:textColorHint="@color/color_bab9b9"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rg_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_user_gender_male"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_left_half_shape"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/common_enter_profile_man"
+                            android:textColor="@color/radio_text_selector"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_center_line"
+                            android:layout_width="1dp"
+                            android:layout_height="46dp"
+                            android:background="@color/color_d7d5d6" />
+
+                        <RadioButton
+                            android:id="@+id/rb_user_gender_female"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_right_half_shape"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/common_enter_profile_woman"
+                            android:textColor="@color/radio_text_selector"
+                            android:textSize="16sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_height_unit_cm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            tools:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/et_user_height_cm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_profile_shape"
+                                android:gravity="center"
+                                android:hint="@string/setting_activity_height"
+                                android:inputType="numberDecimal"
+                                android:textColor="@color/color_313131"
+                                android:textColorHint="@color/color_bab9b9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_height_unit_ft_in"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <EditText
+                                android:id="@+id/et_user_height_ft"
+                                android:layout_width="96dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:background="@drawable/edit_profile_shape"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textColor="@color/color_313131" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="\u05f3"
+                                android:textColor="@color/color_313131"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/et_user_height_in"
+                                android:layout_width="96dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="11dp"
+                                android:background="@drawable/edit_profile_shape"
+                                android:gravity="center"
+                                android:inputType="number" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="\u05f4"
+                                android:textColor="@color/color_313131"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/sp_user_height"
+                                    android:layout_width="60dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:entries="@array/height_code">
+
+                                </Spinner>
+
+                                <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@drawable/btn_main_select_pre" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="70dp"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@drawable/spinner_bottom_line" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="19dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setting_use_manage_glucose"
+                        android:textColor="@color/color_222222"
+                        android:textSize="13sp" />
+
+                    <!--<android.support.v7.widget.SwitchCompat-->
+                    <!--android:id="@+id/sw_use_blood_glucose"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:switchMinWidth="22dp"-->
+                    <!--android:textOff=""-->
+                    <!--android:textOn=""-->
+                    <!--android:theme="@style/MySwitch" />-->
+
+                    <kr.co.openit.bpdiary.customview.CustomSwitch
+                        android:id="@+id/sw_use_blood_glucose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        app:forceAspectRatio="false"
+                        app:switchBkgCheckedImage="@drawable/switch_track_pre"
+                        app:switchBkgNotCheckedImage="@drawable/switch_track_nor"
+                        app:switchDesign="android"
+                        app:switchToggleCheckedImage="@drawable/switch_knob" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:background="@color/color_fbfbfb"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_eff0f2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginBottom="2dp"
+                    android:id="@+id/btn_skip"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_round_pass"
+                    android:gravity="center"
+                    android:text="@string/common_enter_profile_skip"
+                    android:textColor="@color/skip_text_selector" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:id="@+id/btn_complete"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_round_login"
+                    android:enabled="false"
+                    android:text="@string/common_enter_profile_complete"
+                    android:textColor="@color/color_ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

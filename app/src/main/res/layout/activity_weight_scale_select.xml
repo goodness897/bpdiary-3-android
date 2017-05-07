@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <!-- 광고 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/ll_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_000000"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+        <include
+            android:id="@+id/layout_ads"
+            layout="@layout/layout_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ws_ble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_toolbar"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_efebe6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="26dp"
+            android:gravity="center"
+            android:text="@string/weight_supported_blutooth_ws_device"
+            android:textColor="@color/color_888888"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="22dp"
+            android:background="@color/color_efebe6" />
+
+        <RelativeLayout
+            android:background="@drawable/layout_selector"
+            android:id="@+id/rl_xiaomi_mi_scale"
+            android:layout_width="match_parent"
+            android:layout_height="62dp">
+
+            <ImageView
+                android:id="@+id/iv_xiaomi_mi_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/xiaomi_mi_scale" />
+
+            <TextView
+                android:id="@+id/tv_xiaomi_mi_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_xiaomi_mi_scale"
+                android:text="Xiaomi"
+                android:textColor="@color/color_000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_xiaomi_mi_scale"
+                android:text="Mi Scale"
+                android:textColor="@color/color_777474" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26dp"
+                android:background="@drawable/ic_device_list" />
+
+            <LinearLayout
+                android:id="@+id/ll_xiaomi_mi_scale_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_next"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_bluetooth_connect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/common_txt_connected"
+                    android:textColor="@color/color_1877e5"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_efebe6" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginRight="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_ws_ble"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/weight_manual_input_ws_management"
+        android:textColor="@color/color_888888"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

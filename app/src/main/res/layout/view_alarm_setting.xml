@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <!--일반 뷰-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="22dp"
+        android:paddingRight="26dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_check"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/checkbox_off"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_alarm_medicine"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_alarm_medicine"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_alarm_measure"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_alarm_measure"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_apm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#76706c"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/color_000000"
+            android:textSize="26sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--<android.support.v7.widget.SwitchCompat-->
+                <!--android:id="@+id/switch_alarm"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:checked="true"-->
+                <!--android:switchMinWidth="22dp"-->
+                <!--android:textOff=""-->
+                <!--android:textOn=""-->
+                <!--android:theme="@style/MySwitch" />-->
+
+            <kr.co.openit.bpdiary.customview.CustomSwitch
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:id="@+id/switch_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:forceAspectRatio="false"
+                app:switchDesign="android"
+                app:switchBkgCheckedImage="@drawable/switch_track_pre"
+                app:switchBkgNotCheckedImage="@drawable/switch_track_nor"
+                app:switchToggleCheckedImage="@drawable/switch_knob" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

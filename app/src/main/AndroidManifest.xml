@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.openit.bpdiary">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="kr.co.openit.bpdiary.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <permission
+        android:name="kr.co.openit.bpdiary.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name=".BPDiaryApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/bpdiary_app_icon"
+        android:label="@string/application_title"
+        android:largeHeap="true"
+        android:theme="@style/AppBaseTheme">
+
+        <!-- facebook -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- GCM -->
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="kr.co.openit.bpdiary" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GcmIntentService" />
+
+        <!-- 인트로 -->
+        <activity
+            android:name=".activity.intro.IntroActivity"
+            android:label="@string/application_title"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 랜딩 페이지 -->
+        <activity
+            android:name=".activity.intro.OnboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" />
+
+        <!-- 권한 페이지 -->
+        <activity
+            android:name=".activity.common.PermissionsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" />
+
+        <!-- 로그인 로직 -->
+        <activity
+            android:name=".activity.intro.LoginLogicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" />
+
+        <!-- 로그인 페이지 -->
+        <activity
+            android:name=".activity.intro.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" />
+
+        <!-- 회원가입 페이지 -->
+        <activity
+            android:name=".activity.intro.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan|adjustResize" />
+
+        <!-- 비밀번호 찾기 -->
+        <activity
+            android:name=".activity.intro.PasswordSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan|adjustResize" />
+
+        <!-- 비밀번호 찾기 성공 -->
+        <activity
+            android:name=".activity.intro.SendSuccessActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan|adjustResize" />
+
+        <!-- 웹뷰 Activity -->
+        <activity
+            android:name=".activity.common.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.setting.SettingTermsContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 연동기기 Activity -->
+        <activity
+            android:name=".activity.setting.ConnectDeviceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 혈압계 연결 Activity -->
+        <activity
+            android:name=".activity.setting.ConnectBloodPressureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 체중계 연결 Activity -->
+        <activity
+            android:name=".activity.setting.ConnectWeightActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 온라인샵 Activity -->
+        <activity
+            android:name=".activity.setting.OnlineShopActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 공지사항 Activity -->
+        <activity
+            android:name=".activity.setting.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 목표설정 Activity -->
+        <activity
+            android:name=".activity.setting.SettingGoalActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 Activity -->
+        <activity
+            android:name=".activity.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 성별 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileGenderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 알림 Activity -->
+
+        <!-- 확장메뉴 언어선택 Activity -->
+        <activity
+            android:name=".activity.setting.LanguageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 프로필 설정 Activity -->
+        <activity
+            android:name=".activity.setting.SettingProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!-- 확장메뉴 이름 설정 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileNameActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 확장메뉴 비밀번호 변경 Activity -->
+        <activity
+            android:name=".activity.setting.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 확장메뉴 당뇨관리 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileGlucoseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 계정 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileAccountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 탈퇴하기 안내 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileLeaveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 키 갱신 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileTallActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 확장메뉴 생년월일 Activity -->
+        <activity
+            android:name=".activity.setting.ProfileBirthActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 확장메뉴 법적내용 Activity -->
+        <activity
+            android:name=".activity.setting.LegalContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 메인 Activity -->
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- 체중 직접 입력 Activity -->
+        <activity
+            android:name=".activity.weight.DirectInputWeightActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 체중 메모 Activity -->
+        <activity
+            android:name=".activity.weight.WeightMemoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" />
+
+        <!-- 체중 그래프 Activity -->
+        <activity
+            android:name=".activity.weight.WeightGraphActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 체중 블루투스 가이드 Activity -->
+        <activity
+            android:name=".activity.weight.WeightMeasureGuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 체중 입력 Activity -->
+        <activity
+            android:name=".activity.weight.InputWeightActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- 수축기 직접 입력 Activity -->
+        <activity
+            android:name=".activity.bp.DirectInputBPActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈압 메모 Activity -->
+        <activity
+            android:name=".activity.bp.BPMemoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" />
+
+        <!-- 혈압 입력 Activity -->
+        <activity
+            android:name=".activity.bp.BPGraphActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈압 측정 페이지 -->
+        <activity
+            android:name=".activity.bp.BPMeasureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈압 측정 안내 -->
+        <activity
+            android:name=".activity.bp.BPMeasureGuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈압 체중 S health, google fit -->
+        <activity
+            android:name=".activity.bp.BPGFitSHealthActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈압 입력 Activity -->
+        <activity
+            android:name=".activity.bp.InputBPActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- 혈당 직접 입력 Activity -->
+        <activity
+            android:name=".activity.glucose.DirectInputGlucoseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈당 그래프 Activity -->
+        <activity
+            android:name=".activity.glucose.GlucoseGraphActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 혈당 메모 Activity -->
+        <activity
+            android:name=".activity.glucose.GlucoseMemoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" />
+
+        <!-- 혈당 입력 Activity -->
+        <activity
+            android:name=".activity.glucose.InputGlucoseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!-- 프로필 입력 Activity -->
+        <activity
+            android:name=".activity.intro.ProfileEnterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 복약/측정 알림 Activity -->
+        <activity
+            android:name=".activity.setting.SettingAlarmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 알림 추가 Activity-->
+        <activity
+            android:name=".activity.setting.AddAlarmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 복약/측정 알림 선택 Activity-->
+        <activity
+            android:name=".activity.setting.AlarmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activity.bp.BPStandardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 체중 기준 Activity -->
+        <activity
+            android:name=".activity.weight.WeightStandardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 혈당 기준 Activity -->
+        <activity
+            android:name=".activity.glucose.GlucoseStandardActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 혈당 목표설정 Activity -->
+        <activity
+            android:name=".activity.bp.BPSetGoalActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 체중 목표설정 Activity -->
+        <activity
+            android:name=".activity.weight.WeightSetGoalActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Google AD(광고) Activity -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <!-- 복약 알림 Receiver -->
+        <receiver
+            android:name=".services.SettingAlarmReceiver"
+            android:exported="true" />
+
+        <!-- 혈당 목표 설정 Activity -->
+        <activity
+            android:name=".activity.glucose.GlucoseSetGoalActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".activity.setting.SettingInsideActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 레포트 액티비티 -->
+        <activity
+            android:name=".activity.report.ReportMainActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 레포트 공유 Send 액티비티 -->
+        <activity
+            android:name=".activity.report.ReportShareActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 레포트 공유 Send Succes 액티비티 -->
+        <activity
+            android:name=".activity.report.ReportSendSuccessActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 혈압 장비 가이드 액티비티 -->
+        <activity
+            android:name=".activity.mydevice.MyDeviceGuideActivity"
+            android:screenOrientation="portrait" />
+        <!-- 혈압 장비 목록 액티비티 -->
+        <activity
+            android:name=".activity.mydevice.MyDeviceBPActivity"
+            android:screenOrientation="portrait" />
+        <!-- 혈압 장비 찾기 액티비티 -->
+        <activity
+            android:name=".activity.mydevice.MyDeviceSearchBPDeviceActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 데이터 보내기 / 받기 액티비티 -->
+        <activity
+            android:name=".activity.setting.DataSendReceiveActivity"
+            android:screenOrientation="portrait" />
+        <!-- 데이터 보내기 액티비티 -->
+        <activity
+            android:name=".activity.setting.DataSendActivity"
+            android:screenOrientation="portrait" />
+        <!-- 데이터 받기 액티비티 -->
+        <activity
+            android:name=".activity.setting.DataReceiveActivity"
+            android:screenOrientation="portrait" />
+        <!-- 다른 혈압 앱으로부터 정보 받기 액티비티 -->
+        <activity
+            android:name=".activity.setting.CsvOtherAppsInputListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 체중 장비 찾기 액티비티 -->
+        <activity
+            android:name=".activity.mydevice.MyDeviceSearchWSDeviceActivity"
+            android:screenOrientation="portrait" />
+        <!-- 체중 장비 목록 액티비티 -->
+        <activity
+            android:name=".activity.mydevice.MyDeviceWeightScaleActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Bluetooth -->
+        <!-- MeasureService -->
+        <service android:name=".common.measure.bean.MeasureService" />
+        <service
+            android:name=".common.device.UA651"
+            android:enabled="true" />
+        <service
+            android:name=".common.device.WeightScale"
+            android:enabled="true" />
+
+        <!-- meta data -->
+        <!-- Google+ Login & Google AD(광고) -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Samsung S health 상용 -->
+        <meta-data
+            android:name="com.samsung.android.health.platform_type"
+            android:value="rel" />
+
+        <!-- Samsung S health 권한 -->
+        <meta-data
+            android:name="com.samsung.android.health.permission.write"
+            android:value="com.samsung.health.blood_pressure;com.samsung.health.weight" />
+
+        <!-- Samsung S health 테스트 권한 -->
+        <!-- android:value="dev" -->
+
+
+        <!-- <receiver android:name=".BillingReceiver" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.android.vending.billing.IN_APP_NOTIFY" /> -->
+        <!-- <action android:name="com.android.vending.billing.RESPONSE_CODE" /> -->
+        <!-- <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- <service android:name=".BillingService" /> -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="60e2c4fcd3d14327dba399d9c413b72b4171b0a5" />
+    </application>
+
+</manifest>

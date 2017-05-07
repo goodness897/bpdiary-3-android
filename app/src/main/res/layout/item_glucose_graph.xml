@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_glucose_list_img_bg_close"
+        android:layout_width="match_parent"
+        android:layout_height="76dp">
+
+        <kr.co.openit.bpdiary.customview.CustomCircleView
+            android:id="@+id/ccv_result"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="30dp"
+            app:circle_color="@color/color_67d55c" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/list_delete_btn" />
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@id/iv_delete"
+            android:layout_toRightOf="@id/ccv_result">
+
+            <TextView
+                android:id="@+id/tv_glucose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_000000"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_eat"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_meal_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/glucose_default_before_meal"
+                    android:textColor="@color/color_000000"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/selector_main_select_down" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            android:layout_below="@id/rl_top"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="32dp"
+            android:layout_toLeftOf="@id/iv_delete"
+            android:layout_toRightOf="@id/ccv_result">
+
+            <ImageView
+                android:id="@+id/iv_calander"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_list_date" />
+
+            <TextView
+                android:id="@+id/tv_bp_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/iv_calander"
+                android:gravity="center"
+                android:text="2016/04/04"
+                android:textColor="@color/color_a9a9a9"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_bp_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="11:22:00"
+                android:textColor="@color/color_a9a9a9"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@id/tv_bp_item_time"
+                android:background="@drawable/ic_list_time" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_e1deda"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_glucose_list_img_bg_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_fcf9f5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <kr.co.openit.bpdiary.customview.CustomCircleView
+                android:id="@+id/ccv_result_more"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="18dp"
+                app:circle_color="@color/color_67d55c" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/ic_list_tripot_up" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/ccv_result_more"
+                android:gravity="center|left"
+                android:textColor="@color/color_222222"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:background="@drawable/list_expand_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="26dp">
+
+            <TextView
+                android:id="@+id/tv_eat_type"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/shape_round_graph_arm"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/color_6f6b6a"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="14dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="14dp">
+
+                <ImageView
+                    android:id="@+id/iv_memo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_list_edit" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp">
+
+            <TextView
+                android:id="@+id/tv_memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/common_txt_memo"
+                android:textColor="@color/color_222222"
+                android:textColorHint="@color/color_c6c0b7"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

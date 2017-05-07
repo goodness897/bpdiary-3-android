@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bpset_goal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical"
+    tools:context="kr.co.openit.bpdiary.activity.bp.BPSetGoalActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/sv_set_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rv_bottom"
+            android:layout_alignParentTop="true"
+            android:background="#fbfbfb">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/bp_goal_title_text" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="32dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/glucose_before_meal"
+                        android:textColor="@color/color_2b2729"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_before_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="( mg/dL )"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/beforemeel_goal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="46dp"
+                        android:text="@string/glucose_main_txt_status_low"
+                        android:textColor="@color/color_d3cdc9"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="46dp"
+                        android:text="@string/glucose_main_txt_status_over"
+                        android:textColor="@color/color_d3cdc9"
+                        android:textSize="11sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_before_under"
+                                android:layout_width="68dp"
+                                android:layout_height="38dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_before_normal"
+                            android:layout_width="123dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/color_37ca95">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/glucose_set_goal_normal"
+                                android:textColor="@color/color_ffffff"
+                                android:textSize="11sp" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:gravity="center">
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_under_goal"
+                        android:layout_width="73dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/goal_triangle" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_goal_triangle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/goal_triangle" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_before_normal_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="80"
+                            android:textColor="@color/color_a5a5a5"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="57dp"
+                        android:layout_height="wrap_content">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_before_normal_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="120"
+                            android:textColor="@color/color_a5a5a5"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <kr.co.openit.bpdiary.customview.RangeSeekBar
+                    android:id="@+id/rsb_before_meal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    rsb:absoluteMaxValue="150"
+                    rsb:absoluteMinValue="60"
+                    rsb:activeColor="@color/color_37ca95"
+                    rsb:alwaysActive="true"
+                    rsb:barHeight="4dp"
+                    rsb:defaultColor="@color/color_e6e1dd"
+                    rsb:minGap="20"
+                    rsb:showGradient="false"
+                    rsb:showLabels="true"
+                    rsb:textAboveThumbsColor="@color/color_222222"
+                    rsb:thumbDisabled="@drawable/goal_progress_bar_nor"
+                    rsb:thumbNormal="@drawable/goal_progress_bar_nor"
+                    rsb:thumbPressed="@drawable/goal_progress_bar_pre"
+                    rsb:valuesAboveThumbs="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/color_f3f2ef" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/glucose_after_meal"
+                        android:textColor="@color/color_2b2729"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_after_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="( mg/dL )"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/aftermeel_goal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="77dp"
+                        android:text="@string/glucose_main_txt_status_low"
+                        android:textColor="@color/color_d3cdc9"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/glucose_main_txt_status_over"
+                        android:textColor="@color/color_d3cdc9"
+                        android:textSize="11sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_after_under"
+                            android:layout_width="123dp"
+                            android:layout_height="38dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_after_normal"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="#37ca95">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/glucose_set_goal_normal"
+                                android:textColor="@color/color_ffffff"
+                                android:textSize="11sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:gravity="center">
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_under_after_goal"
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/goal_triangle" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_goal_after_triangle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/goal_triangle" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="184dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_after_normal_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="120"
+                            android:textColor="@color/color_a5a5a5"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="57dp"
+                        android:layout_height="wrap_content">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_after_normal_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="160"
+                            android:textColor="@color/color_a5a5a5"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <kr.co.openit.bpdiary.customview.RangeSeekBar
+                    android:id="@+id/rsb_after_meal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    rsb:absoluteMaxValue="200"
+                    rsb:absoluteMinValue="100"
+                    rsb:activeColor="@color/color_37ca95"
+                    rsb:alwaysActive="true"
+                    rsb:barHeight="4dp"
+                    rsb:defaultColor="@color/color_e6e1dd"
+                    rsb:minGap="20"
+                    rsb:showGradient="false"
+                    rsb:showLabels="true"
+                    rsb:textAboveThumbsColor="@color/color_222222"
+                    rsb:thumbDisabled="@drawable/goal_progress_bar_nor"
+                    rsb:thumbNormal="@drawable/goal_progress_bar_nor"
+                    rsb:thumbPressed="@drawable/goal_progress_bar_pre"
+                    rsb:valuesAboveThumbs="false" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rv_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:background="@color/color_fbfbfb">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_init"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:background="@drawable/selector_round_close"
+                    android:text="@string/common_txt_reset"
+                    android:textColor="@color/color_555053" />
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:background="@drawable/btn_save_solid"
+                    android:text="@string/common_txt_set"
+                    android:textColor="@color/color_ffffff" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

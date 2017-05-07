@@ -1,0 +1,95 @@
+{
+  "project_info": {
+    "project_number": "5176011367",
+    "project_id": "bpdiary-7304"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5176011367:android:01aa1be380a8b133",
+        "android_client_info": {
+          "package_name": "kr.co.openit.bpdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5176011367-80b2bcp6vpnv3irg01liadtuk2ol1cq4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "31C256D291D178BE35003A723C3350F47BAFD445"
+          }
+        },
+        {
+          "client_id": "5176011367-bc1vd7t498vr28ghpohr7siolkg71jpd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "F34512E427B1570AE8E17A8E0BE3567D30B6F85C"
+          }
+        },
+        {
+          "client_id": "5176011367-ht01bdld38i6qo2cha2bn7ogq8eok3ev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "E80132E3AF5AF63D456131922B689CC9E07586E2"
+          }
+        },
+        {
+          "client_id": "5176011367-7v7438s7ddvvp212oi54b4co1usnbtfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "671615D43FBF75944BBC372054B9971FB7B9E105"
+          }
+        },
+        {
+          "client_id": "5176011367-63hbkpqo92lbce041900qfmmb5q6trv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "87D11145DE0C374DEC86D47C5CF98665AD7BA524"
+          }
+        },
+        {
+          "client_id": "5176011367-7oll27ghvrtmb89gv5213r6gt11n6oo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "96E5BB287C91E1AEF3E4A8A9A04DDEC579F2652C"
+          }
+        },
+        {
+          "client_id": "5176011367-77oh272g7r3sa5nod4c4k9flsm8v31km.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.openit.bpdiary",
+            "certificate_hash": "873E7718ECBDE005969003BEB47EA27801BF50EA"
+          }
+        },
+        {
+          "client_id": "5176011367-q41l5tdmi245pbc4rr6jqsannd1iu0f5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-76880458-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

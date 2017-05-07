@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_img_base_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fbfbfb"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:orientation="horizontal">
+
+            <!-- 취소 버튼 -->
+            <Button
+                android:id="@+id/bp_measure_btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_round_close"
+                android:text="@string/common_txt_cancel"
+                android:textColor="@color/color_555053" />
+
+            <!-- 저장 버튼 -->
+            <Button
+                android:id="@+id/bp_measure_btn_guide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_save_solid"
+                android:text="@string/bp_guide_measure"
+                android:textColor="@color/color_ffffff" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bp_measure_txt_measuring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bottom"
+            android:layout_marginBottom="176dp"
+            android:gravity="center"
+            android:text="@string/bp_measure_txt_display_default"
+            android:textColor="@color/color_202020"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_bp_graph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bp_measure_txt_measuring"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/bp_graph"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bp_measure_txt_guide_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bp_measure_txt_measuring"
+            android:layout_marginBottom="140dp"
+            android:gravity="center"
+            android:text="@string/bp_measure_txt_noti"
+            android:textColor="@color/color_202020"
+            android:textSize="14sp" />
+
+        <!-- 측정 안내 멘트 -->
+        <TextView
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:id="@+id/bp_measure_txt_guide_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bp_measure_txt_guide_noti"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            android:text="@string/bp_measure_txt_guide_default"
+            android:textColor="@color/color_4b413d"
+            android:textSize="24sp" />
+
+        <!-- 측정중 혈압계 표시 -->
+        <ProgressBar
+            android:id="@+id/bp_measure_progressbar_measuring"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:indeterminateOnly="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="308dp"
+        android:layout_height="wrap_content">
+
+        <!-- 타이틀 텍스트 -->
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@drawable/popup_title"
+            android:gravity="center_vertical"
+            android:paddingLeft="46dp">
+
+            <TextView
+                android:id="@+id/common_default_dialog_txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/dialog_choose_time"
+                android:textColor="@color/color_2b2729"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/common_default_dialog_llayout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_title"
+            android:background="@drawable/img_popbg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <kr.co.openit.bpdiary.dialog.CustomTimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/color_ffffff"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner">
+
+            </kr.co.openit.bpdiary.dialog.CustomTimePicker>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/common_default_dialog_llayout_content"
+            android:background="@drawable/shape_dialog_line" />
+
+        <LinearLayout
+            android:id="@+id/common_default_dialog_llayout_close"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/common_default_dialog_llayout_content"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/popup_button"
+            android:orientation="horizontal">
+
+            <!-- close 버튼 -->
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:text="@string/common_txt_cancel"
+                android:textColor="@color/color_868586"
+                android:textSize="16sp" />
+
+            <!-- input 버튼 -->
+            <TextView
+                android:id="@+id/tv_check"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/dialog_confirm"
+                android:textColor="@color/color_222222"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

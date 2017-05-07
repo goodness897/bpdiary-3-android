@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginTop="8dp"
+    android:background="@color/color_ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/common_name"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="10.2dp"
+        android:layout_marginTop="11dp"
+        android:layout_toLeftOf="@+id/iv_right_arrow"
+        android:text="@string/common_default_name"
+        android:textColor="#b4b1b1"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:layout_marginBottom="15.2dp"
+        android:layout_marginRight="27.2dp"
+        android:layout_marginTop="15.2dp"
+        android:src="@drawable/ic_device_list" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="22dp"
+        android:background="#efebe6" />
+
+
+</RelativeLayout>
+

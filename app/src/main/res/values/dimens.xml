@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="profile_margin_left">26dp</dimen>
+    <dimen name="profile_margin_top">10dp</dimen>
+    <dimen name="profile_margin_bottom">12dp</dimen>
+    <dimen name="profile_text_size">15sp</dimen>
+    <dimen name="profile_layout_height">45dp</dimen>
+    <dimen name="edit_change_password_width">308dp</dimen>
+    <dimen name="edit_change_password_height">46dp</dimen>
+    <dimen name="edit_shape_radius">100dp</dimen>
+    <dimen name="edit_password_size">16sp</dimen>
+    <dimen name="switch_track_width">39dp</dimen>
+    <dimen name="switch_track_height">23dp</dimen>
+    <dimen name="switch_track_radius">44dp</dimen>
+    <dimen name="switch_thumb_width">28dp</dimen>
+    <dimen name="switch_thumb_height">28dp</dimen>
+    <dimen name="btn_account_width">308dp</dimen>
+    <dimen name="btn_account_height">46dp</dimen>
+    <dimen name="btn_account_radius">100dp</dimen>
+    <dimen name="gridview_image_width">48dp</dimen>
+    <dimen name="gridview_image_height">48dp</dimen>
+
+    <dimen name="WheelItemSelectedTextSize">28sp</dimen>
+    <dimen name="WheelItemTextSize">24sp</dimen>
+    <dimen name="WheelItemSpace">24dp</dimen>
+    <dimen name="WheelIndicatorSize">2dp</dimen>
+    <dimen name="WheelMargins">8dp</dimen>
+    <dimen name="measure_txt_margin_on">132dp</dimen>
+
+    <dimen name="flowlayout_horizontal_padding">8dp</dimen>
+    <dimen name="flowlayout_vertical_padding">8dp</dimen>
+    <dimen name="picker_width">60dp</dimen>
+
+    <dimen name="rm_switch_android_height">28dp</dimen>
+    <dimen name="rm_switch_android_width">53dp</dimen>
+
+</resources>

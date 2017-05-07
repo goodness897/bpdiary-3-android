@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bpGraph"
+            type="kr.co.openit.bpdiary.model.BpGraphModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fbfbfb"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_fbfbfb">
+            <!-- 광고 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/ll_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_000000"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible" >
+                <include
+                    android:id="@+id/layout_ads"
+                    layout="@layout/layout_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_graph_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_ads">
+
+                <LinearLayout
+                    android:id="@+id/ll_avg"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_4c4649"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/color_363335">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_all_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/selector_graph_line" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@id/iv_all_line"
+                                android:gravity="center"
+                                android:text="@string/common_txt_all"
+                                android:textColor="@color/selector_graph_text_color"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_today"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_today_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/selector_graph_line" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@id/iv_today_line"
+                                android:gravity="center"
+                                android:text="@string/common_txt_today"
+                                android:textColor="@color/selector_graph_text_color"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_week"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_week_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/selector_graph_line" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@id/iv_week_line"
+                                android:gravity="center"
+                                android:text="@string/common_txt_week"
+                                android:textColor="@color/selector_graph_text_color"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_month"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_month_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/selector_graph_line" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@id/iv_month_line"
+                                android:gravity="center"
+                                android:text="@string/common_txt_month"
+                                android:textColor="@color/selector_graph_text_color"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_year"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_year_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/selector_graph_line" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@id/iv_year_line"
+                                android:gravity="center"
+                                android:text="@string/common_txt_year"
+                                android:textColor="@color/selector_graph_text_color"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_left"
+                            android:layout_width="34dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_graph_btn_left_date" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_right"
+                            android:layout_width="34dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_graph_btn_right_date" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@id/ll_right"
+                            android:layout_toRightOf="@id/ll_left"
+                            android:gravity="center"
+                            android:text="2016/07/30 ~ 2016/08/05"
+                            android:textColor="@color/color_908a8d"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_534d50" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/shape_round_background">
+
+                            <TextView
+                                android:id="@+id/tv_avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/color_979495"
+                                android:textSize="11sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="18dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="7dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/tv_avg_sys"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_ffffff"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_avg_slash"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="47dp"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_toRightOf="@id/tv_avg_sys"
+                                    android:gravity="center"
+                                    android:paddingTop="5dp"
+                                    android:text="/"
+                                    android:textColor="@color/color_766f73"
+                                    android:textSize="34sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_avg_dia"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@id/tv_avg_slash"
+                                    android:gravity="center"
+                                    android:textColor="@color/color_ffffff"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_toRightOf="@id/tv_avg_dia"
+                                    android:gravity="center"
+                                    android:paddingTop="5dp"
+                                    android:text="@string/bp_graph_txt_unit"
+                                    android:textColor="@color/color_776f73"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="9dp"
+                                android:layout_weight="0.3"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@drawable/ic_graph_pul_heart" />
+
+                                <TextView
+                                    android:id="@+id/tv_avg_pulse"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_ffffff"
+                                    android:textSize="32sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_bp_graph_avg"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/shape_round_graph_avg_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_bp_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="13dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_96928c"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bp_pulse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="13dp"
+                        android:gravity="center"
+                        android:text="55"
+                        android:textColor="@color/color_4c4649"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_pulse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_toLeftOf="@id/tv_bp_pulse"
+                        android:background="@drawable/ic_memo_heart" />
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_bp_sys_dia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@id/iv_pulse"
+                        android:gravity="center"
+                        android:text="126 / 72"
+                        android:textColor="@color/color_4c4649"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/ll_avg"
+                    android:layout_below="@id/ll_bp_graph_avg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_bp_graph_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="6dp"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:paddingRight="15dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/shape_round_rectangle_graph"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_marginLeft="13dp"
+                                app:circle_color="@color/color_ec0e0e" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/bp_sys"
+                                android:textColor="@color/color_96928c"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <kr.co.openit.bpdiary.customview.CustomCircleView
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_marginLeft="13dp"
+                                app:circle_color="@color/color_1086eb" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/bp_dia"
+                                android:textColor="@color/color_96928c"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lv_bp_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_ads"
+                android:divider="@color/color_efebe6"
+                android:dividerHeight="0.5dp"
+                android:overScrollMode="never"
+                android:scrollingCache="false"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="143dp"
+                    android:background="@drawable/ic_list_nodata" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/common_txt_list_no_data"
+                    android:textColor="@color/color_dcdad5"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

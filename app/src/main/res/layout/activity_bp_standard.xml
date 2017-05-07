@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical"
+    tools:context=".activity.bp.BPStandardActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="@string/bp_standard_title"
+            android:textColor="@color/color_222222"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/bp_goal_y_scale"
+                        android:textColor="@color/color_b7b4b4"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="180"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:text="160"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="140"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="120"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="90"
+                        android:textColor="@color/color_878484"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp">
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="220dp"
+                        android:background="@drawable/shape_standard_rect" />
+
+                    <View
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/color_bf2b57" />
+
+                    <View
+                        android:layout_width="144dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/color_de5b46" />
+
+                    <View
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/color_eaa85a" />
+
+                    <View
+                        android:layout_width="96dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/color_f2df59" />
+
+                    <View
+                        android:id="@+id/view_normal"
+                        android:layout_width="72dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/color_8cd775" />
+
+                    <View
+                        android:id="@+id/view_under"
+                        android:layout_width="48dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/color_8cb5ec" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="3dp"
+                    android:text="@string/bp_goal_x_scale"
+                    android:textColor="@color/color_b7b4b4"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="60"
+                android:textColor="@color/color_878484"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="80"
+                android:textColor="@color/color_878484"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="90"
+                android:textColor="@color/color_878484"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="100"
+                android:textColor="@color/color_878484"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="110"
+                android:textColor="@color/color_878484"
+
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/img_standard_of_bp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <kr.co.openit.bpdiary.customview.CustomCircleView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:circle_color="@color/color_8cd775" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/bp_sys_set_goal"
+                android:textColor="@color/color_4c4649"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_goal_sys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85~135"
+                android:textColor="@color/color_4c4649"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/bp_dia_set_goal"
+                android:textColor="@color/color_4c4649"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_goal_dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60~86"
+                android:textColor="@color/color_4c4649"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="35dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <kr.co.openit.bpdiary.customview.CustomCircleView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:circle_color="@color/color_8cb5ec" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/bp_main_txt_status_low"
+                        android:textColor="@color/color_414141"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <kr.co.openit.bpdiary.customview.CustomCircleView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:circle_color="@color/color_f2df59" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/bp_main_txt_status_approach"
+                        android:textColor="@color/color_414141"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <kr.co.openit.bpdiary.customview.CustomCircleView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:circle_color="@color/color_de5b46" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/bp_main_txt_status_high_two"
+                        android:textColor="@color/color_414141"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="17dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <kr.co.openit.bpdiary.customview.CustomCircleView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:circle_color="@color/color_8cd775" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/bp_main_txt_status_normal"
+                        android:textColor="@color/color_414141"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <kr.co.openit.bpdiary.customview.CustomCircleView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:circle_color="@color/color_eaa85a" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/bp_main_txt_status_high_one"
+                        android:textColor="@color/color_414141"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <kr.co.openit.bpdiary.customview.CustomCircleView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        app:circle_color="@color/color_bd2b57" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/bp_main_txt_status_very_high"
+                        android:textColor="@color/color_414141"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bp_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_setting_goal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_save_solid"
+                android:singleLine="true"
+                android:text="@string/setting_activity_goal"
+                android:textColor="@color/color_ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_round_close"
+                android:singleLine="true"
+                android:text="@string/bp_guide_btn"
+                android:textColor="@color/color_555053"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bp_bottom"
+        android:layout_below="@id/ll_standard"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/bp_standard_attention"
+            android:textColor="@color/color_a5a5a5"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+

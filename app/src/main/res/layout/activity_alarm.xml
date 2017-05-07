@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_alarm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_efebe6" />
+
+    <RelativeLayout
+        android:id="@+id/rl_alarm_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_layout_height"
+        android:background="@drawable/layout_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="26dp"
+        android:paddingRight="27dp"
+        android:paddingStart="26dp">
+
+        <ImageView
+            android:id="@+id/iv_alarm_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_alarm_medicine" />
+
+        <TextView
+            android:layout_marginBottom="11dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_alarm_medicine"
+            android:text="@string/setting_medicine_alarm"
+            android:textColor="@color/color_000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:background="@drawable/ic_device_list" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="22dp"
+        android:background="@color/color_efebe6" />
+
+    <RelativeLayout
+        android:id="@+id/rv_alarm_messure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_layout_height"
+        android:background="@drawable/layout_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="26dp"
+        android:paddingRight="27dp"
+        android:paddingStart="26dp">
+
+        <ImageView
+            android:id="@+id/iv_alarm_messure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_alarm_measure" />
+
+        <TextView
+            android:layout_marginBottom="11dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_account_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_alarm_messure"
+            android:text="@string/setting_meassure_alarm"
+            android:textColor="@color/color_000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:background="@drawable/ic_device_list" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_efebe6" />
+
+</LinearLayout>

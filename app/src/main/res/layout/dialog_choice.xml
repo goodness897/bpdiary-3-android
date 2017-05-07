@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="308dp"
+        android:layout_height="wrap_content">
+
+        <!-- 타이틀 텍스트 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/popup_title"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp">
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:singleLine="true"
+                android:text="@string/dialog_glucose_check_condition"
+                android:textColor="@color/color_2b2729"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+        <!-- 식전/식후 -->
+        <LinearLayout
+            android:id="@+id/common_glucose_condition_dialog_llayout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_dialog_title"
+            android:background="@drawable/popup_button"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_first_item"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_first_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:button="@drawable/selector_radio_nor_on"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_first_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/color_555053"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/common_glucose_condition_dialog_llayout_content"
+                android:background="@drawable/shape_dialog_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_second_item"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_second_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:button="@drawable/selector_radio_nor_on"
+                    android:paddingLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_second_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/color_555053"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

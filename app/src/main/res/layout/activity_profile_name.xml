@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_profile_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/profile_margin_left"
+        android:layout_marginTop="15dp"
+        android:text="@string/setting_profile_input_name"
+        android:textColor="@color/color_000000"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp">
+
+        <EditText
+            android:id="@+id/et_user_first_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_profile_shape"
+            android:gravity="center"
+            android:hint="@string/common_enter_profile_first_name"
+            android:maxLines="1"
+            android:textColorHint="@color/color_bab9b9"
+            android:textSize="16sp">
+
+            <requestFocus />
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/et_user_last_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/edit_profile_shape"
+            android:gravity="center"
+            android:hint="@string/common_enter_profile_last_name"
+            android:maxLines="1"
+            android:textColorHint="@color/color_bab9b9"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/btn_save"
+            android:layout_marginBottom="14dp"
+            android:background="@color/color_eff0f2" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/btn_shape_solid"
+            android:enabled="false"
+            android:text="@string/setting_save"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_manage_blood_sugar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fbfbfb"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/profile_margin_left"
+        android:paddingRight="27dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/setting_use_manage_glucose"
+            android:textColor="@color/color_000000"
+            android:textSize="13sp" />
+
+        <!--<android.support.v7.widget.SwitchCompat-->
+            <!--android:id="@+id/manage_glucose_switch"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:checked="true"-->
+            <!--android:switchMinWidth="22dp"-->
+            <!--android:textOff=""-->
+            <!--android:textOn=""-->
+            <!--android:theme="@style/MySwitchInside" />-->
+
+        <kr.co.openit.bpdiary.customview.CustomSwitch
+            android:id="@+id/manage_glucose_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            app:forceAspectRatio="false"
+            app:switchBkgCheckedImage="@drawable/switch_track_pre"
+            app:switchBkgNotCheckedImage="@drawable/switch_track_nor"
+            app:switchDesign="android"
+            app:switchToggleCheckedImage="@drawable/switch_knob" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fbfbfb"
+        android:paddingBottom="16dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/btn_shape_solid"
+            android:text="@string/setting_save"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+
+</LinearLayout>
